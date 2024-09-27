@@ -19,3 +19,11 @@ content:
       - { name: tags, label: Tags, type: string, list: true }
       - { name: description, label: Description, type: string }
       - { name: body, label: Body, type: rich-text }
+  - name: read_me
+    label: ReadMe
+    type: file
+    path: README.md
+    fields:
+      - name: description
+        lable: Contents
+        type: string
