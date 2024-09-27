@@ -10,26 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the CMS repository
-    - name: Checkout CMS repo
+    # Step 1: Checkout the CMS repository (private)
+    - name: Checkout CMS repo (private)
       uses: actions/checkout@v2
       with:
-        repository: DORKINHORKIN/cms  # Replace with your CMS repo details
+        token: ${{ secrets.PAT_TOKEN }}  # Use the PAT to access the private CMS repo
+        repository: DORKINHORKIN/cms  # Your private CMS repo
         path: cms
 
-    # Step 2: Checkout the Frontend repository
+    # Step 2: Checkout the Frontend (largerest) repository
     - name: Checkout Frontend repo
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}  # Use the built-in token
-        repository: DORKINHORKIN/largerest  # Frontend repo details
+        token: ${{ secrets.PAT_TOKEN }}  # Use the PAT for the frontend repo
+        repository: DORKINHORKIN/largerest  # Your frontend repo
         path: .  # Checkout frontend repo in the current directory
 
     # Step 3: Ensure CMS folder exists in Frontend repo
     - name: Ensure CMS folder exists in Frontend repo
       run: mkdir -p ./cms
 
-    # Step 4: Clear existing CMS content
+    # Step 4: Clear existing CMS content (optional)
     - name: Clear existing CMS content in frontend
       run: rm -rf ./cms/* || true
 
@@ -46,4 +47,4 @@ jobs:
         git commit -m "Sync CMS content from cms repo"
         git push origin HEAD
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for authentication
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # Use PAT to push changes
