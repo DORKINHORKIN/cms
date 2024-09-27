@@ -14,36 +14,36 @@ jobs:
     - name: Checkout CMS repo
       uses: actions/checkout@v2
       with:
-        repository: DORKINHORKIN/cms  # Replace with the correct owner/repo for your CMS repo
-        path: cms  # Clone the CMS repo into a 'cms' folder
+        repository: DORKINHORKIN/cms  # Replace with your CMS repo details
+        path: cms
 
-    # Step 2: Checkout the Frontend (largerest) repository
+    # Step 2: Checkout the Frontend repository
     - name: Checkout Frontend repo
       uses: actions/checkout@v2
       with:
-        repository: DORKINHORKIN/largerest  # Your frontend repo
-        path: .  # Checkout frontend repo in the current directory (root)
+        token: ${{ secrets.GITHUB_TOKEN }}  # Use the built-in token
+        repository: DORKINHORKIN/largerest  # Frontend repo details
+        path: .  # Checkout frontend repo in the current directory
 
-    # Step 3: Ensure 'cms' folder exists in the frontend repo
+    # Step 3: Ensure CMS folder exists in Frontend repo
     - name: Ensure CMS folder exists in Frontend repo
-      run: |
-        mkdir -p ./cms  # Create 'cms' folder if it doesn't exist
+      run: mkdir -p ./cms
 
-    # Step 4: Clear the existing 'cms' folder (optional)
+    # Step 4: Clear existing CMS content
     - name: Clear existing CMS content in frontend
-      run: |
-        rm -rf ./cms/* || true  # Clear 'cms' folder content if it exists, continue if it's already empty
+      run: rm -rf ./cms/* || true
 
-    # Step 5: Copy CMS content into the 'cms' folder in the root of the Frontend repo
-    - name: Copy CMS content to Frontend's root 'cms' folder
-      run: |
-        cp -R cms/* ./cms/ || echo "No files to copy from CMS repo"  # Copy content, or print a message if no files exist
+    # Step 5: Copy CMS content to frontend
+    - name: Copy CMS content
+      run: cp -R cms/* ./cms/ || echo "No files to copy from CMS repo"
 
-    # Step 6: Commit and Push changes to the Frontend repository
+    # Step 6: Commit and Push changes to Frontend repository
     - name: Commit and Push changes
       run: |
         git config --local user.name "GitHub Action"
         git config --local user.email "action@github.com"
         git add .
         git commit -m "Sync CMS content from cms repo"
-        git push
+        git push origin HEAD
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for authentication
