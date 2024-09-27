@@ -24,13 +24,22 @@ jobs:
         repository: DORKINHORKIN/largerest  # Your frontend repo
         path: .  # Checkout frontend repo in the current directory (root)
 
-    # Step 3: Copy CMS content into the 'cms' folder at the root of the Frontend repo
+    # Step 3: Ensure 'cms' folder exists in the frontend repo
+    - name: Ensure CMS folder exists in Frontend repo
+      run: |
+        mkdir -p ./cms  # Create 'cms' folder if it doesn't exist
+
+    # Step 4: Clear the existing 'cms' folder (optional)
+    - name: Clear existing CMS content in frontend
+      run: |
+        rm -rf ./cms/* || true  # Clear 'cms' folder content if it exists, continue if it's already empty
+
+    # Step 5: Copy CMS content into the 'cms' folder in the root of the Frontend repo
     - name: Copy CMS content to Frontend's root 'cms' folder
       run: |
-        rm -rf ./cms/*  # Optional: Clear the existing 'cms' folder in the frontend repo before copying new content
-        cp -R cms/* ./cms/  # Copy all files and subdirectories from CMS repo to the 'cms' folder in the root of the frontend
+        cp -R cms/* ./cms/ || echo "No files to copy from CMS repo"  # Copy content, or print a message if no files exist
 
-    # Step 4: Commit and Push changes to the Frontend repository
+    # Step 6: Commit and Push changes to the Frontend repository
     - name: Commit and Push changes
       run: |
         git config --local user.name "GitHub Action"
