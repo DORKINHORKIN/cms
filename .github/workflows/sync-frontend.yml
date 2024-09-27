@@ -1,0 +1,40 @@
+name: Sync CMS to Frontend
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch of the CMS repo
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the CMS repository
+    - name: Checkout CMS repo
+      uses: actions/checkout@v2
+      with:
+        repository: DORKINHORKIN/cms  # Replace with the correct owner/repo for your CMS repo
+        path: cms  # Clone the CMS repo into a 'cms' folder
+
+    # Step 2: Checkout the Frontend (largerest) repository
+    - name: Checkout Frontend repo
+      uses: actions/checkout@v2
+      with:
+        repository: DORKINHORKIN/largerest  # Your frontend repo
+        path: .  # Checkout frontend repo in the current directory (root)
+
+    # Step 3: Copy CMS content into the 'cms' folder at the root of the Frontend repo
+    - name: Copy CMS content to Frontend's root 'cms' folder
+      run: |
+        rm -rf ./cms/*  # Optional: Clear the existing 'cms' folder in the frontend repo before copying new content
+        cp -R cms/* ./cms/  # Copy all files and subdirectories from CMS repo to the 'cms' folder in the root of the frontend
+
+    # Step 4: Commit and Push changes to the Frontend repository
+    - name: Commit and Push changes
+      run: |
+        git config --local user.name "GitHub Action"
+        git config --local user.email "action@github.com"
+        git add .
+        git commit -m "Sync CMS content from cms repo"
+        git push
