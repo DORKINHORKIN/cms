@@ -24,6 +24,6 @@ content:
     type: file
     path: README.md
     fields:
-      - name: description
-        lable: Contents
-        type: string
+      - name: body
+        label: Body
+        type: rich-text
