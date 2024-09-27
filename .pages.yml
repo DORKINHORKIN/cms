@@ -1,6 +1,6 @@
 media:
   input: media
-  output: /
+  output: media
 content:
   - name: posts
     label: Posts
