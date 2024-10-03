@@ -34,8 +34,8 @@ jobs:
       # Step 4: Configure Git for committing
       - name: Configure Git
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "dorkinhorkin"
+          git config --global user.email "largerest@gmail.com"
 
       # Step 5: Commit the newly generated file
       - name: Commit changes
