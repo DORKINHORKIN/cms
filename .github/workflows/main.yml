@@ -24,21 +24,28 @@ jobs:
       - name: Install dependencies
         run: npm install
         
-      - name: Create docs directory if it doesn't exist
-        run: mkdir -p docs
-        
       - name: Generate directory structure JSON
         run: node scanRepo.js
         
-       # Commit and push the changes to the repository
-      - name: Commit directory structure JSON
+      - name: Generate JSON file
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Action"
-          git add docs/directory_structure.json
-          git commit -m "Update directory structure JSON"
-          git push origin main
+          node scanRepo.js > directory_structure.json
+
+      # Step 4: Configure Git for committing
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      # Step 5: Commit the newly generated file
+      - name: Commit changes
+        run: |
+          git add build-output.json
+          git commit -m "Add build-output.json generated on $(date)"
+
+      # Step 6: Push the changes to the repository
+      - name: Push changes
+        run: git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
           
