@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Generate directory structure JSON
-        run: node scanRepo.js
+        run: node .github/worflows/scanRepo.js
 
       - name: Move JSON to docs for GitHub Pages
         run: mv directory_structure.json docs/
