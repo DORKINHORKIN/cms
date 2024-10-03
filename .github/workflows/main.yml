@@ -30,10 +30,15 @@ jobs:
       - name: Generate directory structure JSON
         run: node scanRepo.js
         
-      - name: Upload directory structure as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: directory-structure-json
-          path: docs/directory_structure.json
+       # Commit and push the changes to the repository
+      - name: Commit directory structure JSON
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/directory_structure.json
+          git commit -m "Update directory structure JSON"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
           
