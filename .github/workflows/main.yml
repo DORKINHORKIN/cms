@@ -23,7 +23,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+        
+      - name: Create docs directory if it doesn't exist
+        run: mkdir -p docs
+        
       - name: Generate directory structure JSON
         run: node scanRepo.js
 
