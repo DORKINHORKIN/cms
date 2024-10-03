@@ -40,8 +40,8 @@ jobs:
       # Step 5: Commit the newly generated file
       - name: Commit changes
         run: |
-          git add build-output.json
-          git commit -m "Add build-output.json generated on $(date)"
+          git add directory_structure.json
+          git commit -m "Update directory_structure.json"
 
       # Step 6: Push the changes to the repository
       - name: Push changes
