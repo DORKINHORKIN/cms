@@ -25,3 +25,4 @@ const structure = getDirectoryStructure(repoPath);
 fs.writeFileSync('directory_structure.json', JSON.stringify(structure, null, 2));
 
 console.log('Directory structure saved to directory_structure.json');
+console.log(structure);
