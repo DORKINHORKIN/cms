@@ -29,6 +29,11 @@ jobs:
         
       - name: Generate directory structure JSON
         run: node scanRepo.js
+        
+      - name: Upload directory structure as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: directory-structure-json
+          path: docs/directory_structure.json
 
-      - name: Move JSON to docs for GitHub Pages
-        run: mv directory_structure.json docs/
+          
