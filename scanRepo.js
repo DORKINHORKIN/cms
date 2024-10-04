@@ -17,8 +17,8 @@ function getDirectoryStructure(dir) {
         }
     });
         
-    delete directoryStructure['.git'];
-    delete directoryStructure['ull'];
+    delete structure['.git'];
+    delete structure['ull'];
     return structure;
 }
 
