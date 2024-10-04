@@ -30,17 +30,18 @@ Directory structure saved to directory_structure.json
       '45': [Object],
       '51': [Object],
       '52': [Object],
+      '59': [Object],
       '65': [Object],
-      '75': [Object],
       '82': [Object],
       '88': [Object],
       '97': [Object],
       '06': [Object],
-      '6d': [Object],
+      '07': [Object],
       '7b': [Object],
+      '7c': [Object],
       '9d': [Object],
       ae: [Object],
-      c6: [Object],
+      b6: [Object],
       d5: [Object],
       e6: [Object],
       fc: [Object],
@@ -66,10 +67,13 @@ Directory structure saved to directory_structure.json
   'package-lock.json': null,
   'scanRepo.js': null
 }
-2198676158aa08e9eb": null
+ull
       },
       "7b": {
         "8b8c2475403ffe664c949f7893c4a76c52d6df": null
+      },
+      "7c": {
+        "34e71a9151a0eb2d2786f5c0ee54a3031a05af": null
       },
       "9d": {
         "246f56a422204210abf45ecc5a3e6748818815": null
@@ -77,8 +81,8 @@ Directory structure saved to directory_structure.json
       "ae": {
         "be2049b19f01bd9755d7598079e24543d3a0c8": null
       },
-      "c6": {
-        "6271afdd89d9fd9e3db34d44e9df0f74592dee": null
+      "b6": {
+        "9abd3b80ec605e0e665875a456593f9861dcb3": null
       },
       "d5": {
         "64d0bc3dd917926892c55e3706cc116d5b165e": null
