@@ -1,0 +1,134 @@
+Directory structure saved to directory_structure.json
+{
+  '.git': {
+    FETCH_HEAD: null,
+    HEAD: null,
+    branches: {},
+    config: null,
+    description: null,
+    hooks: {
+      'applypatch-msg.sample': null,
+      'commit-msg.sample': null,
+      'fsmonitor-watchman.sample': null,
+      'post-update.sample': null,
+      'pre-applypatch.sample': null,
+      'pre-commit.sample': null,
+      'pre-merge-commit.sample': null,
+      'pre-push.sample': null,
+      'pre-rebase.sample': null,
+      'pre-receive.sample': null,
+      'prepare-commit-msg.sample': null,
+      'push-to-checkout.sample': null,
+      'sendemail-validate.sample': null,
+      'update.sample': null
+    },
+    index: null,
+    info: { exclude: null },
+    logs: { HEAD: null, refs: [Object] },
+    objects: {
+      '23': [Object],
+      '45': [Object],
+      '51': [Object],
+      '52': [Object],
+      '65': [Object],
+      '75': [Object],
+      '82': [Object],
+      '88': [Object],
+      '97': [Object],
+      '06': [Object],
+      '6d': [Object],
+      '7b': [Object],
+      '9d': [Object],
+      ae: [Object],
+      c6: [Object],
+      d5: [Object],
+      e6: [Object],
+      fc: [Object],
+      info: {},
+      pack: {}
+    },
+    refs: { heads: [Object], remotes: [Object], tags: {} },
+    shallow: null
+  },
+  '.github': { workflows: { 'main.yml': null } },
+  '.pages.yml': null,
+  'README.md': null,
+  '_config.yml': null,
+  _posts: { '.gitkeep': null, '2024-09-27-yuh-aye.md': null },
+  assets: { '.gitkeep': null },
+  'directory_structure.json': null,
+  docs: { 'lol.txt': null },
+  media: {
+    '.gitkeep': null,
+    'Screenshot 2024-07-25 184517.png': null,
+    'Screenshot 2024-09-23 214847.png': null
+  },
+  'package-lock.json': null,
+  'scanRepo.js': null
+}
+2198676158aa08e9eb": null
+      },
+      "7b": {
+        "8b8c2475403ffe664c949f7893c4a76c52d6df": null
+      },
+      "9d": {
+        "246f56a422204210abf45ecc5a3e6748818815": null
+      },
+      "ae": {
+        "be2049b19f01bd9755d7598079e24543d3a0c8": null
+      },
+      "c6": {
+        "6271afdd89d9fd9e3db34d44e9df0f74592dee": null
+      },
+      "d5": {
+        "64d0bc3dd917926892c55e3706cc116d5b165e": null
+      },
+      "e6": {
+        "9de29bb2d1d6434b8b29ae775ad8c2e48c5391": null
+      },
+      "fc": {
+        "1d6616fc7788eac5251e827bdbefef5a6b6c15": null
+      },
+      "info": {},
+      "pack": {}
+    },
+    "refs": {
+      "heads": {
+        "main": null
+      },
+      "remotes": {
+        "origin": {
+          "main": null
+        }
+      },
+      "tags": {}
+    },
+    "shallow": null
+  },
+  ".github": {
+    "workflows": {
+      "main.yml": null
+    }
+  },
+  ".pages.yml": null,
+  "README.md": null,
+  "_config.yml": null,
+  "_posts": {
+    ".gitkeep": null,
+    "2024-09-27-yuh-aye.md": null
+  },
+  "assets": {
+    ".gitkeep": null
+  },
+  "directory_structure.json": null,
+  "docs": {
+    "lol.txt": null
+  },
+  "media": {
+    ".gitkeep": null,
+    "Screenshot 2024-07-25 184517.png": null,
+    "Screenshot 2024-09-23 214847.png": null
+  },
+  "package-lock.json": null,
+  "scanRepo.js": null
+}
