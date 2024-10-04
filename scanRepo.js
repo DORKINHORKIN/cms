@@ -13,7 +13,7 @@ function getDirectoryStructure(dir) {
         if (stat.isDirectory()) {
             structure[file] = getDirectoryStructure(fullPath);
         } else {
-            structure[file] = null;
+            structure[file] = fullPath;
         }
     });
         
