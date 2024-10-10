@@ -21,7 +21,7 @@
   },
   'package-lock.json': '/home/runner/work/cms/cms/package-lock.json',
   projects: {
-    'AnotherProject.json': '/home/runner/work/cms/cms/projects/AnotherProject.json',
+    'Jada Doodle.json': '/home/runner/work/cms/cms/projects/Jada Doodle.json',
     'project.json': '/home/runner/work/cms/cms/projects/project.json'
   },
   'scanRepo.js': '/home/runner/work/cms/cms/scanRepo.js'
