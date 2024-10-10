@@ -1,6 +1,8 @@
 {
+  "id": "project1",
   "title": "Project Title",
   "description": "Short project description",
   "image": "URL to project image",
-  "link": "URL to project or more details"
+  "link": "URL to project or more details",
+  "technologies": ["JavaScript", "Svelte", "GitHub API"]
 }
