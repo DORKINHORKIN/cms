@@ -22,7 +22,7 @@
   'package-lock.json': '/home/runner/work/cms/cms/package-lock.json',
   projects: {
     'Jada Doodle.json': '/home/runner/work/cms/cms/projects/Jada Doodle.json',
-    'project.json': '/home/runner/work/cms/cms/projects/project.json'
+    'project1.json': '/home/runner/work/cms/cms/projects/project1.json'
   },
   'scanRepo.js': '/home/runner/work/cms/cms/scanRepo.js'
 }
