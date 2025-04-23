@@ -12,6 +12,7 @@
     '2024-09-27-yuh-aye.md': '/home/runner/work/cms/cms/_posts/2024-09-27-yuh-aye.md'
   },
   assets: { '.gitkeep': '/home/runner/work/cms/cms/assets/.gitkeep' },
+  'content.json': '/home/runner/work/cms/cms/content.json',
   'directory_structure.json': '/home/runner/work/cms/cms/directory_structure.json',
   docs: { 'lol.txt': '/home/runner/work/cms/cms/docs/lol.txt' },
   media: {
@@ -19,6 +20,7 @@
     'Screenshot 2024-07-25 184517.png': '/home/runner/work/cms/cms/media/Screenshot 2024-07-25 184517.png',
     'Screenshot 2024-09-23 214847.png': '/home/runner/work/cms/cms/media/Screenshot 2024-09-23 214847.png'
   },
+  'model.json': '/home/runner/work/cms/cms/model.json',
   'package-lock.json': '/home/runner/work/cms/cms/package-lock.json',
   projects: {
     'Jada Doodle.json': '/home/runner/work/cms/cms/projects/Jada Doodle.json',
